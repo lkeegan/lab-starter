@@ -14,7 +14,7 @@ template:
 # Actions to take place after the learner registers, but before they start interacting with their repo
 
 before:
-- type: # the type of action, full list at https://lab.github.com/docs/actions/
+- type: pull_request.synchronize # the type of action, full list at https://lab.github.com/docs/actions/
   # some actions require additional options, those should appear below `type:`
   # you can execute multiple actions in the `before` block
 
@@ -26,14 +26,14 @@ steps:
 # Step 1: EDIT HERE - INTERNAL COMMENT DESCRIBING STEP 
 - title: Serial version # the title of the step, shown to the learner in the course progress page
   description: The starting point# a description of the step, shown to the learner in the course progress page
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  event: pull_request.synchronize # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 Step 2: EDIT HERE -INTERNAL COMMENT FOR STEP 2
 - title: Parallel loop # the title of the step, shown to the learner in the course progress page
  description: Parallelize the outer loop with OpenMP # a description of the step, shown to the learner in the course progress page
- event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+ event: pull_request.synchronize # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
  actions: # a list of the actions that will occur when the step is triggered by an event
  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
